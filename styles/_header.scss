@@ -1,0 +1,48 @@
+header{
+    display: grid;
+    align-items: center;
+    justify-items:center;
+    grid-template-columns: repeat(7 1fr);
+    grid-auto-flow: column;
+    width: em(450,32);
+}
+
+.volba_temy{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+    position: relative;
+    font-size: 15px;
+
+    li{
+        padding-right: em(23);
+    }
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 60%;
+    height: em(14,32);
+    background-color: $keypad-bg;
+    border-radius: em(15,32);
+}
+
+.slider{
+    border: 1px solid $return-shadow;
+    width: em(8,32);
+    display: inline-block;
+    height: em(8,32);
+    border-radius: 50%;
+    margin-left: em(3,32);
+    background-color: $return-bg;
+    opacity: 0;
+
+    &.active{
+        opacity: 1;
+    }
+
+}
