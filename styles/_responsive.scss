@@ -1,0 +1,41 @@
+ @media (max-width:560px) {
+     .wrapper{
+         min-width: em(380,32);
+     }
+ }
+
+
+  @media (max-width:432px) {
+     .wrapper{
+         min-width: em(300,28);
+         font-size: 28px;
+     }
+
+     .result{
+         font-size: 30px;
+     }
+
+     .primary_btn{
+         &.del,&.reset,&.return {
+             font-size: 20px;
+         }
+     }
+ }
+
+ 
+  @media (max-width:330px) {
+     .wrapper{
+         min-width: em(280,28);
+         font-size: 26px;
+     }
+
+     .result{
+         font-size: 28px;
+     }
+
+      .primary_btn{
+         &.del,&.reset,&.return {
+             font-size: 18px;
+         }
+     }
+ }

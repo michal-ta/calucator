@@ -12,26 +12,33 @@
   
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
+<body class="theme2">
   <main class="wrapper">
     <header>
+    <div class="select">
       <h2 class="nazov">calc</h2>
-      <p> THEME</p>
-      <div class="select">
-      <ul class="volba_temy">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <div class="button">
-        <div class="slider active"></div>
-        <div class="slider"></div>
-        <div class="slider"></div>
-      </div>
+      <div class="position">
+        <p> THEME</p>
+        <div class="volba_temy_wraper">
+      
+          <ul class="volba_temy">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          </ul>
+          <div class="button">
+            <div class="slider1 active" onclick="theme1()"></div>
+            <div class="slider2"onclick="theme2()"></div>
+            <div class="slider3" onclick="theme3()"></div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <div class="result"></div>
+    <div class="result">
+      <p>39,254</p>
+    </div>
+
     <div class="calculator">
       <ul class="buttons_primary">
       <li class="primary_btn">7</li>
@@ -49,7 +56,7 @@
       <li class="primary_btn">.</li>
       <li class="primary_btn">0</li>
       <li class="primary_btn">/</li>
-      <li class="primary_btn">X</li>
+      <li class="primary_btn">x</li>
       <li class="primary_btn reset">RESET</li>
       <li class="primary_btn return">=</li>
       </ul>
@@ -62,4 +69,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+<script src="./JS/script.js"></script>
 </html>

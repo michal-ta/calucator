@@ -1,43 +1,90 @@
 header{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-items:center;
-    grid-template-columns: repeat(7 1fr);
-    grid-auto-flow: column;
-    width: em(450,32);
+    width: 100%;
+}
+
+.select{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color:$btn-bg;
+    width: 100%;
+
+    
+
+
+}
+
+.position{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    & p{
+        font-size: 12px;
+        margin-right: em(25,12);
+    }
+}
+.nazov{
+    color: $btn-bg;
+    font-size: 25px;
+    align-self: end;
+}
+.volba_temy_wraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .volba_temy{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     position: relative;
-    font-size: 15px;
+    font-size: 12px;
+    width: 100%;
+    
+    
+    
 
     li{
-        padding-right: em(23);
+        padding:0;
+        
     }
 }
+
+
+
 
 .button{
     display: flex;
     flex-direction: row;
     list-style: none;
-    width: 60%;
-    height: em(14,32);
+    align-items: center;
+    justify-items: center;
+    width: 110%;
+    height: em(25,32);
     background-color: $keypad-bg;
     border-radius: em(15,32);
 }
 
-.slider{
+.slider1,
+.slider2,
+.slider3{
     border: 1px solid $return-shadow;
-    width: em(8,32);
+    width: em(12,25);
     display: inline-block;
-    height: em(8,32);
+    height: em(12,25);
     border-radius: 50%;
-    margin-left: em(3,32);
+    margin-left: em(3,25);
     background-color: $return-bg;
     opacity: 0;
 

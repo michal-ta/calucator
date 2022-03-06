@@ -10,16 +10,78 @@ a {
 }
 
 header {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7 1fr);
-  grid-auto-flow: column;
-  width: 14.0625em;
+  width: 100%;
+}
+
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #eae3dc;
+  width: 100%;
+}
+
+.position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.position p {
+  font-size: 12px;
+  margin-right: 2.08333em;
+}
+
+.nazov {
+  color: #eae3dc;
+  font-size: 25px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.volba_temy_wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .volba_temy {
@@ -30,19 +92,20 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
+  width: 100%;
 }
 
 .volba_temy li {
-  padding-right: 1.4375em;
+  padding: 0;
 }
 
 .button {
@@ -54,24 +117,32 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
-  width: 60%;
-  height: 0.4375em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 110%;
+  height: 0.78125em;
   background-color: #232c43;
   border-radius: 0.46875em;
 }
 
-.slider {
+.slider1,
+.slider2,
+.slider3 {
   border: 1px solid #93261a;
-  width: 0.25em;
+  width: 0.48em;
   display: inline-block;
-  height: 0.25em;
+  height: 0.48em;
   border-radius: 50%;
-  margin-left: 0.09375em;
+  margin-left: 0.12em;
   background-color: #d03f2f;
   opacity: 0;
 }
 
-.slider.active {
+.slider1.active,
+.slider2.active,
+.slider3.active {
   opacity: 1;
 }
 
@@ -99,10 +170,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .wrapper {
-  width: 14.0625em;
+  min-width: 14.0625em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +209,7 @@ body {
   background-color: #232c43;
   border-radius: 0.3125em;
   margin-bottom: 1.5625em;
+  color: #3a4764;
 }
 
 .buttons_primary {
@@ -157,6 +230,7 @@ body {
   width: 100%;
   justify-items: center;
   padding: 0.3125em;
+  border-radius: 0.46875em;
 }
 
 .buttons_secondary {
@@ -172,9 +246,10 @@ body {
 .primary_btn {
   background-color: #eae3dc;
   text-align: center;
-  width: 2.65625em;
+  width: 90%;
   padding: 0.25em;
-  border-radius: 0.15625em;
+  border-radius: 0.3125em;
+  border-bottom: 0.125em solid #b4a597;
 }
 
 .primary_btn.reset {
@@ -186,6 +261,7 @@ body {
   background-color: #637097;
   font-size: 22px;
   padding: 0.68182em 0;
+  border-bottom: 0.16em solid #404e72;
 }
 
 .primary_btn.return {
@@ -197,39 +273,39 @@ body {
   padding: 0.68182em 0;
   color: #eae3dc;
   background-color: #d03f2f;
+  border-bottom: 0.16em solid #93261a;
 }
 
 .primary_btn.del {
   color: #eae3dc;
   background-color: #637097;
   font-size: 22px;
-  width: 3.86364em;
+  width: 90%;
   padding: 0.68182em 0;
-}
-
-.select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 15%;
+  border-bottom: 0.16em solid #404e72;
 }
 
 .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  border-radius: 0.3125em;
-  height: 3.75em;
+  border-radius: 0.26316em;
+  height: 3.15789em;
   background-color: #182034;
-  margin: 0.78125em 0;
+  margin: 0.65789em 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eae3dc;
+  font-size: 38px;
+}
+
+.result p {
+  margin-right: 0.76316em;
 }
 
 .attribution {
@@ -239,5 +315,37 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (max-width: 560px) {
+  .wrapper {
+    min-width: 11.875em;
+  }
+}
+
+@media (max-width: 432px) {
+  .wrapper {
+    min-width: 10.71429em;
+    font-size: 28px;
+  }
+  .result {
+    font-size: 30px;
+  }
+  .primary_btn.del, .primary_btn.reset, .primary_btn.return {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .wrapper {
+    min-width: 10em;
+    font-size: 26px;
+  }
+  .result {
+    font-size: 28px;
+  }
+  .primary_btn.del, .primary_btn.reset, .primary_btn.return {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
