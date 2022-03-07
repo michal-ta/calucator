@@ -1,3 +1,51 @@
+/*mixin to prepare variable into style.css = in style.scss you need to include :
+class{
+@include cssvars((
+        nameofvar:value,
+        ));
+        */
+.theme1 {
+  --pf-primary-bg: #3a4764;
+  --pf-keypad-bg: #232c43;
+  --pf-screen-bg: #182034;
+  --pf-res-bg: #637097;
+  --pf-res-shadow: #404e72;
+  --pf-return-bg: #d03f2f;
+  --pf-return-shadow: #93261a;
+  --pf-btn-bg: #eae3dc;
+  --pf-btn-shadow: #b4a597;
+  --pf-text-dark: #444b5a;
+  --pf-text-white: white;
+}
+
+.theme2 {
+  --pf-primary-bg: #e6e6e6;
+  --pf-keypad-bg: #d1cccc;
+  --pf-screen-bg: #ededed;
+  --pf-res-bg: #377f86;
+  --pf-res-shadow: #1b5f65;
+  --pf-return-bg: #ca5502;
+  --pf-return-shadow: #893901;
+  --pf-btn-bg: #e5e4e1;
+  --pf-btn-shadow: #a69d91;
+  --pf-text-dark: #35352c;
+  --pf-text-white: #35352c;
+}
+
+.theme3 {
+  --pf-primary-bg: #160628;
+  --pf-keypad-bg: #1d0934;
+  --pf-screen-bg: #30174a;
+  --pf-res-bg: #58077d;
+  --pf-res-shadow: #bc15f4;
+  --pf-return-bg: #00e0d1;
+  --pf-return-shadow: #6cf9f2;
+  --pf-btn-bg: #341c4f;
+  --pf-btn-shadow: #871c9c;
+  --pf-text-dark: #ffe53d;
+  --pf-text-white: #ffe53d;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -38,7 +86,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #eae3dc;
+  color: var(--pf-text-white);
   width: 100%;
 }
 
@@ -61,7 +109,7 @@ header {
 }
 
 .nazov {
-  color: #eae3dc;
+  color: var(--pf-text-white);
   font-size: 25px;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -123,20 +171,20 @@ header {
   justify-items: center;
   width: 110%;
   height: 0.78125em;
-  background-color: #232c43;
+  background-color: var(--pf-keypad-bg);
   border-radius: 0.46875em;
 }
 
 .slider1,
 .slider2,
 .slider3 {
-  border: 1px solid #93261a;
+  border: 1px solid var(--pf-return-shadow);
   width: 0.48em;
   display: inline-block;
   height: 0.48em;
   border-radius: 50%;
   margin-left: 0.12em;
-  background-color: #d03f2f;
+  background-color: var(--pf-return-bg);
   opacity: 0;
 }
 
@@ -147,7 +195,7 @@ header {
 }
 
 html {
-  background-color: #3a4764;
+  background-color: var(--pf-primary-bg);
   width: 100vw;
   height: 100vh;
   font-size: 32px;
@@ -206,10 +254,10 @@ body {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  background-color: #232c43;
+  background-color: var(--pf-keypad-bg);
   border-radius: 0.3125em;
   margin-bottom: 1.5625em;
-  color: #3a4764;
+  color: var(--pf-text-dark);
 }
 
 .buttons_primary {
@@ -244,12 +292,12 @@ body {
 }
 
 .primary_btn {
-  background-color: #eae3dc;
+  background-color: var(--pf-btn-bg);
   text-align: center;
   width: 90%;
   padding: 0.25em;
   border-radius: 0.3125em;
-  border-bottom: 0.125em solid #b4a597;
+  border-bottom: 0.125em solid var(--pf-btn-shadow);
 }
 
 .primary_btn.reset {
@@ -257,11 +305,11 @@ body {
   -ms-grid-column-span: 2;
   grid-column: 1 /3;
   width: 90%;
-  color: #eae3dc;
-  background-color: #637097;
+  color: var(--pf-text-white);
+  background-color: var(--pf-res-bg);
   font-size: 22px;
   padding: 0.68182em 0;
-  border-bottom: 0.16em solid #404e72;
+  border-bottom: 0.16em solid var(--pf-res-shadow);
 }
 
 .primary_btn.return {
@@ -271,18 +319,18 @@ body {
   width: 90%;
   font-size: 22px;
   padding: 0.68182em 0;
-  color: #eae3dc;
-  background-color: #d03f2f;
-  border-bottom: 0.16em solid #93261a;
+  color: var(--pf-text-white);
+  background-color: var(--pf-return-bg);
+  border-bottom: 0.16em solid var(--pf-return-shadow);
 }
 
 .primary_btn.del {
-  color: #eae3dc;
-  background-color: #637097;
+  color: var(--pf-text-white);
+  background-color: var(--pf-res-bg);
   font-size: 22px;
   width: 90%;
   padding: 0.68182em 0;
-  border-bottom: 0.16em solid #404e72;
+  border-bottom: 0.16em solid var(--pf-res-shadow);
 }
 
 .result {
@@ -292,7 +340,7 @@ body {
   width: 100%;
   border-radius: 0.26316em;
   height: 3.15789em;
-  background-color: #182034;
+  background-color: var(--pf-screen-bg);
   margin: 0.65789em 0;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -300,7 +348,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #eae3dc;
+  color: var(--pf-text-white);
   font-size: 38px;
 }
 
