@@ -6,9 +6,6 @@ let themeDarker=document.querySelector('.slider2')
 let themePurple=document.querySelector('.slider3')
 let themeManipulation=document.getElementById('changing');
 
-console.log(themeManipulation)
-
-
 function theme1(){
     themeNormal.classList.add('active');
     themeDarker.classList.remove('active');
