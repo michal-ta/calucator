@@ -279,9 +279,10 @@ body {
   justify-items: center;
   padding: 0.3125em;
   border-radius: 0.46875em;
+  cursor: pointer;
 }
 
-.buttons_secondary {
+.buttons_primary .buttons_secondary {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 2fr;
@@ -289,6 +290,7 @@ body {
   list-style: none;
   justify-items: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .primary_btn {
@@ -298,6 +300,10 @@ body {
   padding: 0.25em;
   border-radius: 0.3125em;
   border-bottom: 0.125em solid var(--pf-btn-shadow);
+}
+
+.primary_btn:active {
+  border-bottom: 0;
 }
 
 .primary_btn.reset {
@@ -312,6 +318,10 @@ body {
   border-bottom: 0.16em solid var(--pf-res-shadow);
 }
 
+.primary_btn.reset:active {
+  border-bottom: 0;
+}
+
 .primary_btn.return {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
@@ -324,6 +334,10 @@ body {
   border-bottom: 0.16em solid var(--pf-return-shadow);
 }
 
+.primary_btn.return:active {
+  border-bottom: 0;
+}
+
 .primary_btn.del {
   color: var(--pf-text-white);
   background-color: var(--pf-res-bg);
@@ -331,6 +345,10 @@ body {
   width: 90%;
   padding: 0.68182em 0;
   border-bottom: 0.16em solid var(--pf-res-shadow);
+}
+
+.primary_btn.del:active {
+  border-bottom: 0;
 }
 
 .result {
@@ -342,6 +360,7 @@ body {
   height: 3.15789em;
   background-color: var(--pf-screen-bg);
   margin: 0.65789em 0;
+  padding-right: 0.65789em;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
@@ -353,7 +372,7 @@ body {
 }
 
 .result p {
-  margin-right: 0.76316em;
+  margin-right: 2em;
 }
 
 .attribution {

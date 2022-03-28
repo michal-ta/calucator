@@ -32,3 +32,36 @@ function theme3(){
     themeManipulation.classList.add('theme3');
     themeManipulation.classList.remove('theme1');
 }
+
+// pocitanie kalkulacka 
+let result=document.querySelector(".result");
+let multi=document.querySelector('.multi');
+
+
+
+
+
+let calcBtn = Array.from(document.getElementsByClassName('primary_btn'));
+
+calcBtn.map(button => {
+    button.addEventListener('click', (e) => {
+        switch(e.target.innerText){
+            case 'RESET':
+                result.innerText = '';
+                
+            break;
+            case 'X':
+            target.innerText ='*';
+            break
+            case 'DEL':
+            result.innerText= result.innerText.slice(0, -1);
+            break;
+            case '=':
+            result.innerText=eval(result.innerText);
+            break;
+            default:
+            result.innerText += e.target.innerText;
+        }
+        
+    })
+})
